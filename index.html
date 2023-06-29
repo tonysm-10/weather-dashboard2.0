@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        header {
+          background-image: url('https://img.freepik.com/free-vector/blue-sky-background_23-2148052387.jpg?w=1380&t=st=1679963505~exp=1679964105~hmac=500d3359b2e89765ec4054d8b70566ebe45d36e01994d480b4b1528cc741e723');
+        }
+        
+    </style>
+
+</head>
+<body>
+   
+    <!-- page header  -->
+    <header>
+        <h1>Weather Dashboard 🌤</h1>
+    </header>
+<!-- Main content  -->
+    <main>
+
+        <!-- search for city container -->
+        <div class="grid-container">
+            <div class="gridItem1 gridItem">
+                <h2 class="searchCity">🏙️ Search for a City:</h2>
+                <input id="cityInput" placeholder="City" type="text">
+                <button id="searchBtn">Search</button>
+            </div>
+    <!-- display todays weather container -->
+            <div class="gridItem2 gridItem">
+                <h2 id="city"class="city"></h2>
+                <p id="date"></p>
+                <h2>Weather Results:</h2>
+                <div class="flex-container">
+                    <div class="flexitem">
+                        <div id="temp"></div>
+                    </div>
+
+                    <div class="flexitem">
+                        <div id="wind"></div>
+                    </div>
+
+                    <div class="flexitem">
+                        <div id="humidity"></div>
+                    </div>
+                </div>
+                
+            </div>
+    <!-- get city history container  -->
+            <div class="gridItem3 gridItem">
+                <button id="historyBtn">History</button>
+                <div class="containerHistory">
+                    <div id="cityHistory" ></div>
+                </div>
+               
+            </div>
+    <!-- five day forecast container -->
+            <div class="gridItem4 gridItem">
+                <div id="fiveDayForecast">
+                    <!-- DAY ONE -->
+                    <div class="dayFlex">
+                        <div>
+                            <h2>Day One</h2>
+                            <div id="dateOne"></div>
+                        </div>
+                        <div class="day dayOne" id="dayOne">
+                                <div id="tempOne"></div>
+                                <div id="humidOne"></div>
+                                <div id="windOne"></div>
+                        </div>
+                    </div>
+                    <!-- DAY TWO -->
+                    <div class="dayFlex">
+                        <div>
+                            <h2>Day Two</h2>
+                            <div id="dateTwo"></div>
+                        </div>
+                        <div class="day dayTwo" id="dayTwo">
+                            <div id="tempTwo"></div>
+                            <div id="humidTwo"></div>
+                            <div id="windTwo"></div>
+                        </div>
+                    </div>
+                    <!-- DAY THREE -->
+                    <div class="dayFlex">
+                        <div>
+                            <h2>Day Three</h2>
+                            <div id="dateThree"></div>
+                        </div>
+                        <div class="day dayThree" id="dayThree">
+                            <div id="tempThree"></div>
+                            <div id="humidThree"></div>
+                            <div id="windThree"></div>
+                        </div>
+                    </div>
+                    <!-- DAY FOUR -->
+                    <div class="dayFlex">
+                        <div>
+                            <h2>Day Four</h2>
+                            <div id="dateFour"></div>
+                        </div>
+                        <div class="day dayFour" id="dayFour">
+                            <div id="tempFour"></div>
+                            <div id="humidFour"></div>
+                            <div id="windFour"></div>
+                        </div>
+                    </div>
+                    
+                      <!-- DAY FIVE  -->
+                    <div class="dayFlex">
+                        <div>
+                            <h2>Day Five</h2>
+                            <div id="dateFive"></div>
+                        </div>
+                        <div class="day dayFive" id="dayFive">
+                            <div id="tempFive"></div>
+                            <div id="humidFive"></div>
+                            <div id="windFive"></div>
+                        </div>
+                    </div>
+                    
+                 
+                   
+                </div>
+            </div>
+
+
+
+        </div>
+    
+    </main>
+    
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
+    <script src="./script.js"></script> 
+</body>
+</html>
